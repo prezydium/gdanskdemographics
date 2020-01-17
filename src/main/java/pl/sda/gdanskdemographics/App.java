@@ -10,7 +10,7 @@ public class App {
         analyzer.findByName("RUDNIKI");
     }
 
-    private static District[] loadDistricts() throws IOException {
+    public static District[] loadDistricts() throws IOException {
         String loadedData = FileLoaderUtil.readFileAsSingleStringByFilesReadString("data.csv");
         String[] rows = loadedData.split("\r\n");
         District[] districts = new District[rows.length - 1];
