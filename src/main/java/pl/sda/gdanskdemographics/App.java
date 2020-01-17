@@ -6,6 +6,8 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         District[] districts = loadDistricts();
+        Analyzer analyzer = new Analyzer(districts);
+        analyzer.findByName("RUDNIKI");
     }
 
     private static District[] loadDistricts() throws IOException {
