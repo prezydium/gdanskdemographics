@@ -21,17 +21,17 @@ public class Analyzer {
         for (District currentAnalysedDistrict : allDistricts) {
             if (currentAnalysedDistrict.getGender().equals(gender) &&
                     !currentAnalysedDistrict.getDistrictName().equals("GDAŃSK")) {
-                if (age > 0 && age < 17) {
+                if (age >= 0 && age < 18) {
                     if (currentAnalysedDistrict.getAgeUnderEighteen() > resultDistrict.getAgeUnderEighteen()) {
                         resultDistrict = currentAnalysedDistrict;
                     }
                 }
-                if (age > 18 && age < 59) {
+                if (age >= 18 && age < 60) {
                     if (currentAnalysedDistrict.getAgeFromEighteenToFiftyNine() > resultDistrict.getAgeFromEighteenToFiftyNine()) {
                         resultDistrict = currentAnalysedDistrict;
                     }
                 }
-                if (age > 60 && age < 64) {
+                if (age >= 60 && age < 65) {
                     if (currentAnalysedDistrict.getAgeFromSixtyToSixtyFour() > resultDistrict.getAgeFromSixtyToSixtyFour()) {
                         resultDistrict = currentAnalysedDistrict;
                     }
